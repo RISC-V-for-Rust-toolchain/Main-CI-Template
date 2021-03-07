@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup riscv-gnu-toolchain
+      - name: Setup riscv-gnu-toolchain 
   # uses: colinaaa/setup-riscv-gnu-toolchain@f2e57f05178a0353db6118234a8390c53da5a756
         uses: colinaaa/setup-riscv-gnu-toolchain@v1.0.2
 
