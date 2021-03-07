@@ -1,0 +1,18 @@
+fn main() {
+    println!("Hello, world!");
+}
+
+#[cfg(test)]
+mod tests {
+    use std::assert_ne;
+
+    #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
+    
+    #[test]
+    fn it_not_works() {
+        assert_ne!(2 + 2, 3);
+    }
+}
