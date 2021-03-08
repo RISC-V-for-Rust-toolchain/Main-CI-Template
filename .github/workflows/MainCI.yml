@@ -23,6 +23,9 @@ jobs:
   # uses: colinaaa/setup-riscv-gnu-toolchain@f2e57f05178a0353db6118234a8390c53da5a756
         uses: colinaaa/setup-riscv-gnu-toolchain@v1.0.2
 
+      - name: test for-riscv-gnu-toolchain
+        run: ls /opt/hostedtoolcache/riscv-gnu-toolchain/2020.08-1/x64/bin/
+
       - name: Rust Build
         run: cargo build --verbose
 
