@@ -1,9 +1,15 @@
-# [build]
-# target = "riscv64gc-unknown-linux-gnu"
-# rustflags = ["-C", "target-feature=+crt-static"]
+[build]
+target = "riscv64gc-unknown-linux-gnu"
+rustflags = ["-C", "target-feature=+crt-static"]
 
 # [target.riscv64gc-unknown-linux-gnu]
 # runner = "qemu-riscv64"
 # linker = "/opt/riscv/bin/riscv64-unknown-linux-gnu-gcc"
 # ar = "/opt/riscv/bin/riscv64-unknown-linux-ar"
+# CI use other path
+
+
+[target.riscv64gc-unknown-linux-gnu]
+runner = "qemu-riscv64"
+linker = "/opt/hostedtoolcache/riscv-gnu-toolchain/2020.08-1/x64/bin/riscv64-linux-gnu-gcc-10.2.0"
 # CI use other path
