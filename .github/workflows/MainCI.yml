@@ -26,6 +26,14 @@ jobs:
       - name: test for-riscv-gnu-toolchain
         run: ls /opt/hostedtoolcache/riscv-gnu-toolchain/2020.08-1/x64/bin/
       
+      - name: Docker Setup QEMU
+      # You may pin to the exact commit or the version.
+      # uses: docker/setup-qemu-action@6520a2d2cb6db42c90c297c8025839c98e531268
+        uses: docker/setup-qemu-action@v1.0.1
+        with:
+          # Platforms to install (e.g. arm64,riscv64,arm)
+            platforms: riscv64
+      
       - name: Rustup add
         run: rustup target add riscv64gc-unknown-linux-gnu
       
