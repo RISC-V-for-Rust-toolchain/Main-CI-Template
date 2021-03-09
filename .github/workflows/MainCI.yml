@@ -25,7 +25,13 @@ jobs:
 
       - name: test for-riscv-gnu-toolchain
         run: ls /opt/hostedtoolcache/riscv-gnu-toolchain/2020.08-1/x64/bin/
-
+      
+      - name: Rustup add
+        run: rustup target add riscv64gc-unknown-linux-gnu
+      
+      - name: Rustup test
+        run:  rustup target list
+      
       - name: Rust Build
         run: cargo build --verbose
 
